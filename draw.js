@@ -8,6 +8,7 @@ function setup(){
 const color_input = document.getElementById('color');
 const weight_input = document.getElementById('weight');
 const clear = document.getElementById('clear')
+const save = document.getElementById('save')
 
 // keep track of all paths
 const paths = [];
@@ -47,9 +48,13 @@ function mousePressed(){
     paths.push(curr_path);
 }
 
-
+// remove all paths and clear the background
 clear.addEventListener('click', () => {
-    // remove all paths and clear the background
     paths.splice(0);
     background(255);
+});
+
+// save the current canvas
+save.addEventListener('click', () => {
+    saveCanvas('my-drawing', 'png')
 });
