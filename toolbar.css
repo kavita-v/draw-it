@@ -1,0 +1,50 @@
+.toolbar {
+    background-color: #8c9396;
+    box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.7);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 5px;
+    z-index: 1000;
+    width: 10%;
+}
+
+.toolbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.toolbar ul li {
+    padding: 5px 0;
+}
+
+.toolbar input,
+.toolbar button {
+    text-align: center;
+    width: 100%;
+}
+
+.toolbar li:last-of-type {
+    margin-top: auto;
+}
+
+.toolbar button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.toolbar label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
