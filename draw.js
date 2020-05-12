@@ -18,6 +18,9 @@ let curr_path = []
 function draw(){
     noFill();
 
+    // check which tool is active
+    let tool = document.getElementById('tool').value;
+
     if (mouseIsPressed){
         const point = {
             x: mouseX,
@@ -25,6 +28,9 @@ function draw(){
             color: color_input.value,
             weight: weight_input.value
         };
+        if (tool=="eraser"){
+            point.color = "white"
+        }
         curr_path.push(point);
     }
 
@@ -37,10 +43,9 @@ function draw(){
         });
         endShape();
     })
-    
 }
 
-// event fired when mouse id pressed
+// event fired when mouse is pressed
 function mousePressed(){
     // clean the current path
     curr_path = [];
